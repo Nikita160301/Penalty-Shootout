@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panelty Shootout Game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <img src="http://us.123rf.com/450wm/sarawuth702/sarawuth7021604/sarawuth702160400005/55087377-soccer-goal.jpg?ver=6" alt="" class="ground">
+    <img src="./image/goalkeeper.png" class="i2" id="b2" alt="">
+    <button id="b1" class="ball" onclick="goal()"><img class="i1" src="./image/football.png" alt="" ></button>
+    <div class="controlgoal">
+        <button class="control" onclick="leftTop()">Left-Top</button>
+        <button class="control" onclick="centerTop()">Center-Top</button>
+        <button class="control" onclick="rightTop()">Right-Top</button><br>
+        <button class="control" onclick="leftMiddle()">Left-Middle</button>
+        <button class="control" onclick="centerMiddle()">Center-Middle</button>
+        <button class="control" onclick="rightMiddle()">Right-Middle</button><br>
+        <button class="control" onclick="leftBottom()">Left-Bottom</button>
+        <button class="control" onclick="centerBottom()">Center-Bottom</button>
+        <button class="control" onclick="rightBottom()">Right-Bottom</button><br>
+        <h1 class="score"><span id="player1NameElement">A</span>: <span id="Player1Score">0</span></h1>
+        <h1 class="score"><span id="player2NameElement">B</span>: <span id="Player2Score">0</span></h1>
+    </div>
+    <div class="right">
+        <h1 id="GoalDone1"></h1>
+    </div>
+    <div class="left">
+        <h1 id="GoalDone2"></h1>
+    </div>
+    <div id="popupContainer" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="userinfo">
+                <h2 id="popupTitle">Enter Player Names</h2>
+                <div id="playerNames">
+                    <input type="text" id="player1Name" placeholder="Player 1 Name">
+                    <button onclick="nextPlayer()" class="next">Next</button>
+                </div>
+                <div id="player2Input" style="display: none;">
+                    <input type="text" id="player2Name" placeholder="Player 2 Name">
+                    <button onclick="startGame()" class="start">Start Game</button>
+                </div>
+            </div>
+            <div id="gameEnd" style="display: none;">
+                <h2>Game Over</h2>
+                <p id="winnerName"></p>
+                <p id="scores"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
